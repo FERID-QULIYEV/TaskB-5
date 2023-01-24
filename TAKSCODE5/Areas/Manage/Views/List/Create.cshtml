@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model EmployeeVM
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    <div class="form-group">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Pozition"></label>
+        <input asp-for="Pozition" class="form-control">
+        <span asp-validation-for="Pozition" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Instagram"></label>
+        <input asp-for="Instagram" class="form-control">
+        <span asp-validation-for="Instagram" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+            <label asp-for="Twitter"></label>
+        <input asp-for="Twitter" class="form-control">
+        <span asp-validation-for="Twitter" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Facebook"></label>
+        <input asp-for="Facebook" class="form-control">
+        <span asp-validation-for="Facebook" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LinkEdin"></label>
+        <input asp-for="LinkEdin" class="form-control">
+        <span asp-validation-for="LinkEdin" class="text-danger"></span>
+    </div>
+     <button class="btn btn-success" type="submit" asp-area="Manage" asp-controller="List" asp-action="Create">Create</button>
+</form>

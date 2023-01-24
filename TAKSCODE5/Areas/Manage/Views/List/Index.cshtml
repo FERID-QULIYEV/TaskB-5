@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<Employee>
+<div class="table-responsive">
+    <a class="btn btn-primary my-3" asp-area="Manage" asp-controller="List" asp-action="Create">Create</a>
+    <table id ="recent-purchases-listing" class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Pozition</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Instagram</th>
+                <th>Facebook</th>
+                <th>Twitter</th>
+                <th>LinkEdin</th>
+                <th colspan=2>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model ?? new List<Employee>())
+            {
+                <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Pozition</td>
+                        <td>@item.Description</td>
+                        <td>@item.Image</td>
+                        <td>@item.Instagram</td>
+                        <td>@item.Facebook</td>
+                        <td>@item.Twitter</td>
+                        <td>@item.LinkEdin</td>
+                    <td class="nav-item"> <a class="btn btn-primary " asp-controller="List" asp-action="Create">Update</a></td>
+                        <td class="nav-item"> <a asp-controller="List" asp-action="Delete">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

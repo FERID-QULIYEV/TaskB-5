@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TAKSCODE5.props" />
+</Project>
